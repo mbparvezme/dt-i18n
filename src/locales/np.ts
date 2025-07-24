@@ -1,6 +1,7 @@
 // np.ts - Nepali (Nepal)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const np: LocaleData = {
+  lang: 'np',
   numbers: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],
   months: [
     'जनवरी', 'फेब्रुअरी', 'मार्च', 'अप्रिल', 'मे', 'जुन',

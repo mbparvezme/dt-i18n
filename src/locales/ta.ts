@@ -1,6 +1,7 @@
 // ta.ts - Tamil (India/Sri Lanka)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const ta: LocaleData = {
+  lang: 'ta',
   numbers: ['௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'],
   months: [
     'ஜனவரி', 'பிப்ரவரி', 'மார்ச்', 'ஏப்ரல்', 'மே', 'ஜூன்',

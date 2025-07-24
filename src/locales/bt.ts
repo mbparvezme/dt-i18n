@@ -1,6 +1,7 @@
 // bt.ts - Dzongkha (Bhutan)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const bt: LocaleData = {
+  lang: 'bt',
   numbers: ['༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩'],
   months: [
     'ཟླ་དང་པོ', 'ཟླ་གཉིས་པ', 'ཟླ་གསུམ་པ', 'ཟླ་བཞི་པ', 'ཟླ་ལྔ་པ', 'ཟླ་དྲུག་པ',

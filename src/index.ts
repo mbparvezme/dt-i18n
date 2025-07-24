@@ -1,12 +1,15 @@
-import { DateUtils } from './core/DateUtils'
+// This file is the main entry point for your package.
+// It should only export the core functionality.
 
-const dt = new DateUtils() as DateUtils & {
-  use: (date?: Date | string | number) => DateUtils
+import { DateUtils } from './core/DateUtils';
+
+/**
+ * A simple factory function that creates a new DateUtils instance.
+ * @param date - Optional date to initialize with (string, number, or Date object).
+ * @returns A new instance of DateUtils.
+ */
+function dt(date?: Date | string | number) {
+  return new DateUtils(date);
 }
 
-dt.use = function (date?: Date | string | number) {
-  return new DateUtils(date)
-}
-
-export { DateUtils }
-export default dt
+export { dt, DateUtils };

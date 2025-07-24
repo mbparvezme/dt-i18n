@@ -1,6 +1,7 @@
 // bd.ts - Bengali (Bangladesh)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const bd: LocaleData = {
+  lang: 'bn',
   numbers: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'],
   months: [
     'জানুয়ারি', 'ফেব্রুয়ারি', 'মার্চ', 'এপ্রিল', 'মে', 'জুন',

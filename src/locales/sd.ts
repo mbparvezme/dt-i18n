@@ -1,6 +1,7 @@
 // sd.ts - Sindhi (Pakistan/India)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const sd: LocaleData = {
+  lang: 'sd',
   numbers: ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],
   months: [
     'جنوري', 'فيبروري', 'مارچ', 'اپريل', 'مئي', 'جون',

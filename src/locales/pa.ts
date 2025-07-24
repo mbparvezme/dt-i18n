@@ -1,6 +1,7 @@
 // pa.ts - Punjabi (India/Pakistan)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const pa: LocaleData = {
+  lang: 'pa',
   numbers: ['੦', '੧', '੨', '੩', '੪', '੫', '੬', '੭', '੮', '੯'],
   months: [
     'ਜਨਵਰੀ', 'ਫ਼ਰਵਰੀ', 'ਮਾਰਚ', 'ਅਪ੍ਰੈਲ', 'ਮਈ', 'ਜੂਨ',

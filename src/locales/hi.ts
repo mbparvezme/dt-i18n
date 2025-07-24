@@ -1,6 +1,7 @@
 // in.ts - Hindi (India)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const hi: LocaleData = {
+  lang: 'hi',
   numbers: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],
   months: [
     'जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून',

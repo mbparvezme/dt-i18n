@@ -1,6 +1,7 @@
 // bho.ts - Bhojpuri (India/Nepal)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const bho: LocaleData = {
+  lang: 'bho',
   numbers: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],
   months: [
     'जनवरी', 'फरवरी', 'मार्च', 'अप्रैल', 'मई', 'जून',

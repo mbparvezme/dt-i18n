@@ -1,6 +1,7 @@
 // pk.ts - Urdu (Pakistan)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const pk: LocaleData = {
+  lang: 'pk',
   numbers: ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],
   months: [
     'جنوری', 'فروری', 'مارچ', 'اپریل', 'مئی', 'جون',

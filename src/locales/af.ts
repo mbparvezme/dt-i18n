@@ -1,6 +1,7 @@
 // af.ts - Pashto (Afghanistan)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const af: LocaleData = {
+  lang: 'af',
   numbers: ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],
   months: [
     'جنوري', 'فبروري', 'مارچ', 'اپریل', 'می', 'جون',

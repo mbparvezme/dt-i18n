@@ -1,6 +1,7 @@
 // gu.ts - Gujarati (India)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const gu: LocaleData = {
+  lang: 'gu',
   numbers: ['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'],
   months: [
     'જાન્યુઆરી', 'ફેબ્રુઆરી', 'માર્ચ', 'એપ્રિલ', 'મે', 'જૂન',

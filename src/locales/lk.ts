@@ -1,6 +1,7 @@
 // lk.ts - Sinhala (Sri Lanka)
-import type { LocaleData } from '../types';
+import type { LocaleData } from '../types/index';
 const lk: LocaleData = {
+  lang: 'lk',
   numbers: ['෦', '෧', '෨', '෩', '෪', '෫', '෬', '෭', '෮', '෯'],
   months: [
     'ජනවාරි', 'පෙබරවාරි', 'මාර්තු', 'අප්‍රේල්', 'මැයි', 'ජූන්',
