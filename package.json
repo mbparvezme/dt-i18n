@@ -1,0 +1,37 @@
+{
+  "name": "dt-i18n",
+  "version": "1.0.0-rc1",
+  "description": "A lightweight, modular JavaScript/TypeScript date and time utility with built-in internationalization (i18n) support for many languages.",
+  "repository": {
+    "type": "git",
+    "url": "dt-i18n"
+  },
+  "license": "MIT",
+  "author": "M B Parvez (https://www.mbparvez.me)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "i18n",
+    "internationalization",
+    "localization",
+    "typescript",
+    "javascript",
+    "bangla",
+    "hindi",
+    "datetime",
+    "formatter"
+  ],
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^7.0.6",
+    "vitest": "^3.2.4"
+  }
+}

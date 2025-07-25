@@ -1,0 +1,14 @@
+// bt.ts - Dzongkha (Bhutan)
+import type { LocaleData } from '../types';
+const bt: LocaleData = {
+  numbers: ['༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩'],
+  months: [
+    'ཟླ་དང་པོ', 'ཟླ་གཉིས་པ', 'ཟླ་གསུམ་པ', 'ཟླ་བཞི་པ', 'ཟླ་ལྔ་པ', 'ཟླ་དྲུག་པ',
+    'ཟླ་བདུན་པ', 'ཟླ་བརྒྱད་པ', 'ཟླ་དགུ་པ', 'ཟླ་བཅུ་པ', 'ཟླ་བཅུ་གཅིག་པ', 'ཟླ་བཅུ་གཉིས་པ'
+  ],
+  weekdays: ['གཟའ་ཉི་མ་', 'གཟའ་ཟླ་བ་', 'གཟའ་མིག་དམར་', 'གཟའ་ཧཱུར་', 'གཟའ་ཕུར་བུ་', 'གཟའ་སངས་', 'གཟའ་ཉི་མ་སྔ་པོ་'],
+  localizeNumber(input: string | number): string {
+    return String(input).replace(/\d/g, d => this.numbers[+d]);
+  }
+};
+export default bt;

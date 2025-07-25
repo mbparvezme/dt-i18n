@@ -1,0 +1,14 @@
+// mv.ts - Dhivehi (Maldives)
+import type { LocaleData } from '../types';
+const mv: LocaleData = {
+  numbers: ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],
+  months: [
+    'ޖަނަވަރީ', 'ފެބްރުއަރީ', 'މާރޗް', 'އެޕްރީލް', 'މޭ', 'ޖޫން',
+    'ޖުލައި', 'އޯގަސްޓް', 'ސެޕްޓެމްބަރ', 'އޮކްޓޯބަރ', 'ނޮވެމްބަރ', 'ޑިސެމްބަރ'
+  ],
+  weekdays: ['އާދީއްތަ', 'ހޯމަ', 'އަންގާރަ', 'ބުދަ', 'ބުރަސްފަތި', 'ހުކުރު', 'ހޮނިހިރު'],
+  localizeNumber(input: string | number): string {
+    return String(input).replace(/\d/g, d => this.numbers[+d]);
+  }
+};
+export default mv;
