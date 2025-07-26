@@ -1,18 +1,19 @@
-import { formatDateTime } from './formatter';
-import type { LocaleData } from '../types/index';
-import en from '../locales/en'; // Keep English as a built-in default
+import { formatDateTime } from './formatter'
+import type { LocaleData } from '../types/index'
+import en from '../locales/en'
 
 /**
  * A utility class for formatting dates with a simple, synchronous API.
  */
 export class DateUtils {
-  private date: Date;
-  // The current locale starts as English by default.
-  private currentLocale: LocaleData = en;
+  private date: Date
+  private currentLocale: LocaleData = en
 
-  constructor(date?: Date | string | number) {
-    const d = new Date(date ?? Date.now());
-    this.date = isNaN(d.getTime()) ? new Date() : d;
+  constructor(date?: Date | string | number, locale?: LocaleData) {
+    const d = new Date(date ?? Date.now())
+    // Fallback to current date if invalid, null or empty
+    this.date = isNaN(d.getTime()) ? new Date() : d
+    this.currentLocale = locale || en
   }
 
   /**
@@ -21,8 +22,8 @@ export class DateUtils {
    * @returns The instance of DateUtils for chaining.
    */
   locale(localeObject: LocaleData): this {
-    this.currentLocale = localeObject;
-    return this;
+    this.currentLocale = localeObject
+    return this
   }
 
   /**
@@ -31,6 +32,6 @@ export class DateUtils {
    * @returns The final formatted and localized date-time string.
    */
   format(formatString: string): string {
-    return formatDateTime(this.date, formatString, this.currentLocale);
+    return formatDateTime(this.date, formatString, this.currentLocale)
   }
 }

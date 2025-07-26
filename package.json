@@ -9,16 +9,19 @@
   "license": "MIT",
   "author": "M B Parvez (https://www.mbparvez.me)",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.es.js",
       "types": "./dist/index.d.ts"
     },
-    "./locales": {
-      "import": "./dist/locales/index.js",
-      "types": "./dist/locales/index.d.ts"
+    "./locales/*": {
+      "import": "./dist/locales/*.es.js",
+      "types": "./dist/locales/*.d.ts"
     }
   },
   "scripts": {
@@ -33,9 +36,6 @@
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "date",
     "time",
@@ -48,10 +48,5 @@
     "hindi",
     "datetime",
     "formatter"
-  ],
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7",
-    "url": "^0.11.4"
-  }
+  ]
 }

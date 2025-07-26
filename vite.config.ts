@@ -8,7 +8,7 @@ import { readdirSync } from 'fs';
 const localeFiles = readdirSync(resolve(__dirname, 'src/locales'))
   .filter(file => file.endsWith('.ts') && file !== 'index.ts');
 
-const localeEntries = localeFiles.reduce((acc, file) => {
+const localeEntries = localeFiles.reduce((acc: Record<string, string>, file) => {
   const entryName = `locales/${file.replace(/\.ts$/, '')}`;
   acc[entryName] = resolve(__dirname, `src/locales/${file}`);
   return acc;
