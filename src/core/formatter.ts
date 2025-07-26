@@ -23,13 +23,13 @@ export function formatDateTime(date: Date, format: string, locale: LocaleData): 
     YY: String(year).slice(-2),
 
     // Month
-    MN: locale.months[month], // Full month name
+    MMMM: locale.months[month], // Full month name
     MM: String(month + 1).padStart(2, '0'), // Month as two digits
     M: String(month + 1), // Month as one digit
     // MS: locale.months[month].substring(0, 3), // Short month name Or add `monthsShort`
 
     // Day
-    DN: locale.weekdays[dayOfWeek], // Full weekday name
+    DDDD: locale.weekdays[dayOfWeek], // Full weekday name
     DD: String(dayOfMonth).padStart(2, '0'), // Days of the month as two digits
     D: String(dayOfMonth), // Days of the month as one digit 
     // DS: locale.weekdays[dayOfWeek].substring(0, 3), // Or add `weekdaysShort`
@@ -54,7 +54,7 @@ export function formatDateTime(date: Date, format: string, locale: LocaleData): 
   }
 
   // Build a regex to find all supported tokens.
-  const tokenRegex = /YYYY|YY|MN|MM|M|DN|DD|D|HH|H|hh|h|mm|m|ss|s|A|a/g
+  const tokenRegex = /YYYY|YY|MMMM|MM|M|DDDD|DD|D|HH|H|hh|h|mm|m|ss|s|A|a/g
 
   // Replace tokens with their values.
   const formattedString = format.replace(tokenRegex, (match) => tokens[match] || match)
