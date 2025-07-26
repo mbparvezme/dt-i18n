@@ -1,4 +1,4 @@
-// lk.ts - Sinhala (Sri Lanka)
+// si.ts - Sinhala
 import type { LocaleData } from '../types/index';
 const lk: LocaleData = {
   numbers: ['෦', '෧', '෨', '෩', '෪', '෫', '෬', '෭', '෮', '෯'],

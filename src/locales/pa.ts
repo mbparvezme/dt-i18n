@@ -1,4 +1,4 @@
-// pa.ts - Punjabi (India/Pakistan)
+// pa.ts - Punjabi
 import type { LocaleData } from '../types/index';
 const pa: LocaleData = {
   numbers: ['੦', '੧', '੨', '੩', '੪', '੫', '੬', '੭', '੮', '੯'],

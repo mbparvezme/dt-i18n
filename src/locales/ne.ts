@@ -1,4 +1,4 @@
-// np.ts - Nepali (Nepal)
+// np.ts - Nepali
 import type { LocaleData } from '../types/index';
 const np: LocaleData = {
   numbers: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],

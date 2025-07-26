@@ -2,11 +2,11 @@
 // It exports all available locales for easy importing.
 // For example: import { ptBR } from 'dt-i18n/locales';
 
-export { default as af } from './af';
+export { default as af } from './ps';
 export { default as ar } from './ar';
 export { default as bho } from './bho';
 export { default as bn } from './bn';
-export { default as bt } from './bt';
+export { default as bt } from './dz';
 export { default as de } from './de';
 export { default as en } from './en';
 export { default as es } from './es';
@@ -15,11 +15,11 @@ export { default as gu } from './gu';
 export { default as hi } from './hi';
 export { default as id } from './id';
 export { default as ja } from './ja';
-export { default as lk } from './lk';
-export { default as mv } from './mv';
-export { default as np } from './np';
+export { default as lk } from './si';
+export { default as mv } from './dv';
+export { default as np } from './ne';
 export { default as pa } from './pa';
-export { default as pk } from './pk';
+export { default as pk } from './ur';
 export { default as ptBr } from './pt-br';
 export { default as ru } from './ru';
 export { default as sd } from './sd';

@@ -1,4 +1,4 @@
-// af.ts - Pashto (Afghanistan)
+// ps.ts - Pashto
 import type { LocaleData } from '../types/index';
 const af: LocaleData = {
   numbers: ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],

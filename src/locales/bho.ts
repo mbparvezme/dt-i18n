@@ -1,4 +1,4 @@
-// bho.ts - Bhojpuri (India/Nepal)
+// bho.ts - Bhojpuri
 import type { LocaleData } from '../types/index';
 const bho: LocaleData = {
   numbers: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],

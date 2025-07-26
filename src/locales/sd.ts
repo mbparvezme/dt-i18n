@@ -1,4 +1,4 @@
-// sd.ts - Sindhi (Pakistan/India)
+// sd.ts - Sindhi
 import type { LocaleData } from '../types/index';
 const sd: LocaleData = {
   numbers: ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],

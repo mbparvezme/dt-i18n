@@ -1,4 +1,4 @@
-// ta.ts - Tamil (India/Sri Lanka)
+// ta.ts - Tamil
 import type { LocaleData } from '../types/index';
 const ta: LocaleData = {
   numbers: ['௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'],

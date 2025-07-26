@@ -1,4 +1,4 @@
-// mv.ts - Dhivehi (Maldives)
+// dv.ts - Dhivehi (Maldives)
 import type { LocaleData } from '../types/index';
 const mv: LocaleData = {
   numbers: ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],

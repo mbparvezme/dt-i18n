@@ -1,4 +1,4 @@
-// bt.ts - Dzongkha (Bhutan)
+// dz.ts - Dzongkha (Bhutan)
 import type { LocaleData } from '../types/index';
 const bt: LocaleData = {
   numbers: ['༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩'],

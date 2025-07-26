@@ -1,4 +1,4 @@
-// in.ts - Hindi (India)
+// in.ts - Hindi
 import type { LocaleData } from '../types/index';
 const hi: LocaleData = {
   numbers: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],

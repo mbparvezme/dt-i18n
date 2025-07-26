@@ -1,4 +1,4 @@
-// pk.ts - Urdu (Pakistan)
+// ur.ts - Urdu
 import type { LocaleData } from '../types/index';
 const pk: LocaleData = {
   numbers: ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],

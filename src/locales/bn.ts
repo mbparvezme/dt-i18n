@@ -1,4 +1,4 @@
-// bd.ts - Bengali (Bangladesh)
+// bd.ts - Bengali
 import type { LocaleData } from '../types/index';
 const bd: LocaleData = {
   numbers: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'],

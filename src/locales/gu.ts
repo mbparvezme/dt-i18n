@@ -1,4 +1,4 @@
-// gu.ts - Gujarati (India)
+// gu.ts - Gujarati
 import type { LocaleData } from '../types/index';
 const gu: LocaleData = {
   numbers: ['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'],
