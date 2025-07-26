@@ -1,0 +1,24 @@
+# Ignore source files
+src/
+*.ts
+
+# Ignore config files
+tsconfig.json
+vite.config.ts
+vitest.config.ts
+*.config.*
+
+# Ignore lock files and meta
+package-lock.json
+.gitignore
+.npmignore
+
+# Ignore test files
+__tests__/
+tests/
+*.test.ts
+
+# Ignore other folders
+node_modules/
+.git/
+.vscode/

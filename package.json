@@ -1,0 +1,52 @@
+{
+  "name": "dt-i18n",
+  "version": "1.0.0-rc4",
+  "description": "A lightweight, modular JavaScript/TypeScript date and time utility with built-in internationalization (i18n) support for many languages.",
+  "repository": {
+    "type": "git",
+    "url": "dt-i18n"
+  },
+  "license": "MIT",
+  "author": "M B Parvez (https://www.mbparvez.me)",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./locales/*": {
+      "import": "./dist/locales/*.es.js",
+      "types": "./dist/locales/*.d.ts"
+    }
+  },
+  "scripts": {
+    "prebuild": "ts-node scripts/generate-locales.ts",
+    "build": "npm run prebuild && vite build",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0",
+    "vite": "^7.0.6",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "i18n",
+    "internationalization",
+    "localization",
+    "typescript",
+    "javascript",
+    "bangla",
+    "hindi",
+    "datetime",
+    "formatter"
+  ]
+}
