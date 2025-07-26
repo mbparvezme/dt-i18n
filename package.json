@@ -1,6 +1,6 @@
 {
   "name": "dt-i18n",
-  "version": "1.0.0-rc2",
+  "version": "1.0.0-rc3",
   "description": "A lightweight, modular JavaScript/TypeScript date and time utility with built-in internationalization (i18n) support for many languages.",
   "repository": {
     "type": "git",
