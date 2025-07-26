@@ -1,13 +1,22 @@
 # dt-i18n
+
+  [![npm version](https://img.shields.io/npm/v/dt-i18n?style=for-the-badge&logo=npm&logoColor=red&color=red&labelColor=FFEFEF)](https://www.npmjs.com/package/dt-i18n)
+  [![NPM Downloads](https://img.shields.io/npm/d18m/dt-i18n?style=for-the-badge&&labelColor=EFFFEF)](https://www.npmjs.com/package/dt-i18n)
+  [![GitHub issues](https://img.shields.io/github/issues/mbparvezme/dt-i18n?style=for-the-badge&logo=github&logoColor=black&color=orange&labelColor=FFF5E8)](https://github.com/mbparvezme/dt-i18n/issues)
+
 Tired of wrestling with date and time formatting across different languages? dt-i18n is here to help. It's a lightweight, zero-dependency JavaScript library designed to make formatting and translating dates simple, elegant, and fast.
 
+<br>
+
 ## Why You'll Love dt-i18n
-- 🌍 Go Global: Instantly support over 57 languages, from Spanish to Swahili.
-- 🚀 Lightweight & Fast: With zero dependencies, dt-i18n adds minimal weight to your project.
-- 🌲 Smart Bundling: Thanks to tree-shaking, only the locales you actually use get included in your final build.
-- ✨ Simple API: We believe in clean, fluent, and intuitive APIs that you can learn in minutes.
-- 🔧 Built to Extend: Adding a new language or customizing an existing one is a breeze.
-- 💻 Universal: dt-i18n feels right at home in both Node.js and modern browsers.
+- **🌍 Go Global:** Instantly support over 57 languages, from Spanish to Swahili.
+- **🚀 Lightweight & Fast:** With zero dependencies, `dt-i18n` adds minimal weight to your project.
+- **🌲 Smart Bundling:** Thanks to tree-shaking, only the locales you actually use get included in your final build.
+- **✨ Simple & Powerful API:** A clean, fluent, and chainable API that is easy to learn and powerful to use.
+- **🔧 Built to Extend:** Adding a new language or customizing an existing one is a breeze.
+- **💻 Universal:** `dt-i18n` feels right at home in both Node.js and modern browsers.
+
+<br>
 
 ## Installation
 Getting started is as simple as installing the package via npm:
@@ -16,57 +25,144 @@ Getting started is as simple as installing the package via npm:
 npm install dt-i18n
 ```
 
-## Getting Started
+<br>
+
+## API & Examples
 The API is designed to be straightforward. Just import the main `dt` function and the specific locales you need.
 
-### Basic Formatting
-```js
-import { dt } from 'dt-i18n';
 
-// Format the current date (defaults to English)
-const today = dt().format('DDDD, MMMM DD, YYYY');
-// => "Saturday, July 26, 2025"
-```
-
-### Formatting with a Locale
-To translate a date, import a locale and pass it to the `.locale()` method. It's that easy.
-```js
-import { dt } from 'dt-i18n';
-import { bn, es } from 'dt-i18n/locales';
-
-// Translate to Bengali
-const bengaliDate = dt().locale(bn).format('DDDD, DD MMMM, YYYY');
-// => "শনিবার, ২৬ জুলাই, ২০২৫"
-
-// Translate to Spanish
-// Note: You can escape text by wrapping it in brackets []
-const spanishDate = dt().locale(es).format('DDDD, DD [de] MMMM [de] YYYY');
-// => "sábado, 26 de julio de 2025"
-```
-
-Formatting a Specific Date
-You can pass a date string, a timestamp, or a `Date` object directly to the `dt` function.
-
-```js
-import { dt } from 'dt-i18n';
-import { ja } from 'dt-i18n/locales';
-
-const specificDate = '2026-01-15T14:30:00';
-
-const japaneseDate = dt(specificDate).locale(ja).format('YYYY年M月D日 HH:mm');
-// => "2026年1月15日 14:30"
-```
-Alternate Usage
-For convenience, you can also pass the locale as the second argument.
+### 1. Creating an Instance
+Create a `dt` instance in several ways:
 
 ```js
 import { dt } from 'dt-i18n';
 import { fr } from 'dt-i18n/locales';
 
-// Passing an empty string for the date uses the current date
-const frenchDate = dt('', fr).format('DD MMMM YYYY');
-// => "26 juillet 2025"
+// Current date and time
+dt();
+
+// From a specific date string
+dt('2025-07-26');
+
+// From a timestamp
+dt(1753548600000);
+
+// With a locale
+dt(new Date(), fr);
 ```
+
+### 2. Custom Format Parsing
+Parse date strings that are in a non-standard format.
+
+```js
+import { dt } from 'dt-i18n';
+
+const date = dt('26/07/2025 03:30 PM', 'DD/MM/YYYY hh:mm A');
+
+console.log(date.format('YYYY-MM-DD HH:mm'));
+// => "2025-07-26 15:30"
+```
+
+### 3. Formatting
+Use `.format()` to get a string representation of the date.
+
+```js
+import { dt } from 'dt-i18n';
+import { bn } from 'dt-i18n/locales';
+
+// Default (English)
+dt('2025-07-26').format('DDDD, MMMM DD, YYYY');
+// => "Saturday, July 26, 2025"
+
+// With a locale
+dt('2025-07-26', bn).format('DDDD, DD MMMM, YYYY');
+// => "শনিবার, ২৬ জুলাই, ২০২৫"
+```
+
+### 4. Timezones
+Display a date in any timezone using the .tz() method.
+
+```js
+import { dt } from 'dt-i18n';
+
+const utcDate = '2025-07-26T14:00:00Z'; // 2:00 PM in UTC
+
+dt(utcDate).tz('America/New_York').format('h:mm A'); // => "10:00 AM"
+dt(utcDate).tz('Asia/Tokyo').format('h:mm A');       // => "11:00 PM"
+```
+
+### 5. Manipulation
+Easily add, subtract, and jump to the start or end of a time period.
+
+```js
+import { dt } from 'dt-i18n';
+
+// Add/Subtract
+dt('2025-01-10').add(5, 'days').format('YYYY-MM-DD');      // => "2025-01-15"
+dt('2025-01-10').subtract(1, 'month').format('YYYY-MM-DD'); // => "2024-12-10"
+
+// Start/End of
+dt('2025-07-26').startOf('month').format('YYYY-MM-DD'); // => "2025-07-01"
+dt('2025-07-26').endOf('month').format('YYYY-MM-DD');   // => "2025-07-31"
+```
+
+### 6. Comparison & Querying
+Check if a date is before, after, or the same as another.
+
+```js
+import { dt } from 'dt-i18n';
+
+const dateA = dt('2025-10-10');
+const dateB = dt('2025-11-11');
+const dateC = dt('2025-10-10T23:00:00');
+
+dateA.isBefore(dateB);    // => true
+dateB.isAfter(dateA);     // => true
+dateA.isSameDay(dateC);   // => true
+dateA.isSameMonth(dateB); // => false
+```
+
+### 7. Duration and Intervals
+Work with spans of time using Duration and Interval objects.
+
+```js
+import { dt } from 'dt-i18n';
+
+const start = dt('2025-01-01');
+const end = dt('2025-01-11');
+
+// Get the difference as a Duration object
+const duration = end.diff(start);
+console.log(duration.as('days'));  // => 10
+console.log(duration.as('hours')); // => 240
+
+// Create an Interval to see if a date falls within a range
+const event = dt.interval(start, end);
+event.contains('2025-01-05'); // => true
+```
+
+### 8. Calendar Generation
+Instantly generate a 6x7 calendar grid for any month.
+
+```js
+import { dt } from 'dt-i18n';
+
+// Get the calendar for July 2025
+const julyCalendar = dt('2025-07-01').calendar();
+
+// The result is a 2D array of dt objects, perfect for building a UI
+julyCalendar.forEach(week => {
+  const weekString = week.map(day => day.format('DD')).join(' ');
+  console.log(weekString);
+});
+
+// Output:
+// 29 30 01 02 03 04 05
+// 06 07 08 09 10 11 12
+// ...and so on
+```
+
+<br>
 
 ## Formatting Tokens
 Here are all the tokens you can use in your format string.
@@ -91,6 +187,7 @@ Here are all the tokens you can use in your format string.
 | `A`    | `PM`                | Uppercase AM/PM              |
 | `a`    | `pm`                | Lowercase am/pm              |
 
+<br>
 
 ## Supported Languages
 | Language   | Code      | Language   | Code      | Language   | Code      |
@@ -115,6 +212,8 @@ Here are all the tokens you can use in your format string.
 | French     | `fr`      | Polish     | `pl`      | Vietnamese | `vi`      |
 | Gujarati   | `gu`      | Pashto     | `ps`      | Chinese (Simp.) | `zh` |
 
+<br>
+
 ## Contributing
 Want to help make `dt-i18n` even better? We'd love your help! Contributions from the community are welcome and appreciated.
 
@@ -135,11 +234,15 @@ npm run build
 ```
 7. Submit a Pull Request with a clear description of your changes.
 
+<br>
+
 ## Author
 This package was developed by M B Parvez.
 
 - GitHub: [@mbparvezme](https://github.com/mbparvezme)
 - Website: [www.mbparvez.me](https://www.mbparvez.me)
+
+<br>
 
 ## License
 dt-i18n is open-source software licensed under the [MIT License](https://github.com/mbparvezme/dt-i18n?tab=MIT-1-ov-file).
